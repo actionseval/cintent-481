@@ -24,12 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # CINTENT >> INSERT_CINTENT
-      - uses: JavidDitty/setup-cintent@23f433fdb37d0a420804269a89ed1940368546fe
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      # CINTENT >> INSERT_CINTENT
+      - uses: JavidDitty/setup-cintent@3e5b2faf83a2ad32c22a1cd0f86f5f20ea53a5ab
+
       - name: Install pre-commit
         run: |
           python -m pip install pre-commit
